@@ -1,16 +1,82 @@
-# React + Vite
+<h1 align="center">Welcome to My Portfolio 👋</h1>
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Titre
+> PORTFOLIO PERSONNEL — DÉVELOPPEUR WEB FULLSTACK
 
-Currently, two official plugins are available:
+## Nom du projet
+Portfolio — Julien Hardy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Présentation du Portfolio
 
-## React Compiler
+Ce portfolio a été conçu pour présenter l’ensemble de mes projets web, mes compétences ainsi que mon parcours en tant que développeur web.  
+Développé avec **React** et **Tailwind CSS**, il met en avant des interfaces modernes, épurées et animées grâce à **Framer Motion**, tout en restant entièrement responsive.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Chaque projet est présenté sous forme de carte interactive avec un effet flip, une description, les technologies utilisées et un lien direct vers le déploiement ou le repository GitHub.
 
-## Expanding the ESLint configuration
+Une attention particulière a été portée à l’UX/UI, à l’harmonie visuelle et à la cohérence globale du design, afin d’offrir une navigation fluide, intuitive et professionnelle.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **Fonctionnalités principales du Portfolio :**
+
+- **Section Hero** présentant mon identité professionnelle  
+- **Cartes projets interactives** (Flip 3D, animations Framer Motion)  
+- **Technos affichées par icônes** pour une lecture rapide  
+- **Version responsive complète** (desktop, tablette, mobile)  
+- **Footer dynamique** avec liens vers mes réseaux (GitHub, LinkedIn, Email)  
+- **Transitions et animations fluides** pour une expérience moderne  
+- **Organisation claire des sections** : À propos, Compétences, Projets, Contact  
+- **Design basé sur Tailwind** pour une structure propre et modulaire  
+
+Ce portfolio reflète mon évolution, ma rigueur, ma créativité et ma maîtrise des technologies modernes du web.
+
+---
+
+## Technologies utilisées
+
+- **React.js**
+- **Tailwind CSS**
+- **Framer Motion**
+- **React Icons**
+- **CSS / SCSS**
+- **JSON (sources de données pour certains projets)**
+
+---
+
+## Projets présentés
+
+Chaque carte renvoie soit vers le projet déployé (Vercel, Netlify), soit vers son dépôt GitHub.
+
+Exemples de projets inclus :
+- **Cutie Panda** — Application React de gestion de personnage  
+- **Empty Fridge** — Application React de suggestion de recettes  
+- **Cinéma Pathé** — Simulateur de borne de réservation  
+- **Farine & Potiron** — Plateforme communautaire PHP/MVC  
+- **Gestion d’articles** — Application CRUD avec rôles utilisateurs  
+- + autres projets présentés directement dans la section dédiée
+
+---
+
+## Installation
+
+Pour installer et lancer le portfolio en local :
+
+```bash
+# 1. Cloner le repository
+git clone https://github.com/JHGit-hub/mon-portfolio.git
+
+# 2. Accéder au dossier du projet
+cd mon-portfolio
+
+# 3. Installer les dépendances
+npm install
+
+# 4. Lancer le serveur de développement
+npm run dev
+
+## Author
+
+👤 **Julien - Promo 2025**
+
+* Github: [@JHGit-hub](https://github.com/JHGit-hub)

@@ -72,7 +72,7 @@ export default function Projects() {
                         { Icon: FaJs, label: "JavaScript" },
                         { Icon: SiSass, label: "Sass" }
                         ]}
-                        projectLink=""
+                        projectLink="https://jhgit-hub.github.io/Examen-FrontEnd-Pathe/"
                     />
 
                     {/* Carte du projet Hotel*/}
@@ -88,7 +88,7 @@ export default function Projects() {
                         { Icon: FaJs, label: "JavaScript" },
                         { Icon: SiSass, label: "Sass" }
                         ]}
-                        projectLink=""
+                        projectLink="https://jhgit-hub.github.io/Hotel-4-elements/"
                     />
 
                     {/* Carte du projet Bolonews*/}
