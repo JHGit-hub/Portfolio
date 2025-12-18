@@ -5,6 +5,7 @@ import Header from "./components/Header.jsx";
 import About from "./sections/About.jsx";
 import Skills from "./sections/Skills.jsx";
 import Projects from "./sections/Projects.jsx";
+import Contact from './sections/Contact.jsx';
 
 export default function App() {
 
@@ -14,6 +15,7 @@ export default function App() {
             <About />
             <Skills />
             <Projects />
+            <Contact />
             <Header />
             <OverlaySideRight />
             <Footer />

@@ -1,21 +1,27 @@
-<div className="project-card flex flex-col justify-center items-center relative gap-[1rem] pb-[0.5rem]">
-            <div className="project-card-inner">
-                <div className="project-card-front flex justify-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imageSrcFront})` }}>
-                    <div className="title-project relative">
-                        <div className="project-card-wrapper relative">
-                            <h5 className="title text-[var(--dark-color)] z-10 relative">{title}</h5>
-                            <div className="blur-bg"></div>
-                        </div>
-                    </div>
-                </div>
-                <div className="project-card-back flex justify-center bg-[var(--light-color)] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${imageSrcBack})` }}>
-                    <div className="project-card-back-inner h-full relative flex flex-col justify-center items-center gap-[1rem] p-[1rem]">
-                        {/* <h6 className="title relative z-10">Description</h6> */}
-                        <p className="techno-description text-[var(--dark-color)] relative z-10">{description}</p>
-                        <TechnoUsed icons={technos} />
-                        <div className="blur-bg-back"></div>
-                    </div>
-                </div>
+import ActionBtn from "./buttons/ActionBtn";
+
+export default function SuccessModal({ onClose }) {
+
+    return (
+
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center
+                    bg-black/60 backdrop-blur-sm">
+
+            <div className="bg-[var(--dark-color)] rounded-[4px] p-[0.5rem] max-w-md w-full text-center
+                      shadow-xl animate-fadeIn">
+
+                <h2 className="text-[1.25rem] font-['poppins-semibold'] text-[var(--accent-color)] mb-4">
+                    Merci pour votre message
+                </h2>
+
+                <p className="text-[1rem] text-[var(--light-color)] font-['poppins-regular'] mb-6">
+                    Votre message a bien été envoyé.
+                    Je vous répondrai dans les meilleurs délais.
+                </p>
+
+                <ActionBtn type="button" label="Retour à l'accueil" onClick={onClose} />
+
             </div>
-            <SecondaryBtn to={projectLink} />
         </div>
+    );
+}
