@@ -34,11 +34,11 @@ export default function ProjectCard({ title, description, imageSrcFront, imageSr
                             backfaceVisibility: "hidden"
                         }}
                     >
-                        <div className="title-project relative">
+                        <div className="front-card-title relative">
                             <div className="project-card-wrapper relative">
-                                <h5 className="title text-[var(--light-color)] z-10 relative">
+                                <h3 className="project-title text-[var(--light-color)] z-10 relative">
                                     {title}
-                                </h5>
+                                </h3>
                                 <div className="blur-bg" />
                             </div>
                         </div>

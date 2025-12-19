@@ -13,7 +13,7 @@ export default function About() {
                 <SectionTitle number="01" title="About"/>
             </div>
             <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">
-                <h4 className="self-start">Bonjour, je suis Julien<span className="font-bold text-[3rem] block uppercase">Développeur Web FullStack</span></h4>
+                <h3 className="about-title self-start">Bonjour, je suis Julien<span className="font-bold text-[3rem] block uppercase">Développeur Web FullStack</span></h3>
                 <div className="flex flex-row gap-[4rem] items-stretch">
                     <div className="flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
                         <div className="flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">

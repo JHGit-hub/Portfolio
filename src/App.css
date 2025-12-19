@@ -16,6 +16,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.footer {
+    background-color: #21252930;
+    backdrop-filter: blur(6px);
+}
+
 
 /****** COLORS ******/
 :root {
@@ -58,18 +63,6 @@ h3 {
     color: rgb(245, 246, 246, 0.2);
     font-size: 4rem;
     text-transform: uppercase;
-}
-
-h4 {
-    font-family: "poppins-medium";
-    color: #F5F6F6;
-    font-size: 5rem;
-}
-
-h5 {
-    font-family: "poppins-semibold";
-    color: #212529;
-    font-size: 2rem;
 }
 
 p {
@@ -454,9 +447,10 @@ button {
 
 
 /****************************************************************************/
-/******************************** Composants ********************************/
+/********************************** Titles **********************************/
 /****************************************************************************/
 
+/****** Section title ******/
 .section-title-wrapper {
     position: relative;
     display: inline-block;
@@ -491,23 +485,18 @@ button {
     user-select: none;
 }
 
-.footer {
-    background-color: #21252930;
-    backdrop-filter: blur(6px);
+/****** About Title *******/
+.about-title{
+    font-family: "poppins-medium";
+    color: #F5F6F6;
+    font-size: 5rem;
 }
-
-/****************************************************************************/
-/****************************** About Section ******************************/
-/****************************************************************************/
-
-
-
 
 /****************************************************************************/
 /****************************** Skills Section ******************************/
 /****************************************************************************/
 
-/****** Skills Grid ******/
+/****** Skills Card ******/
 .skills-grid {
     width: 100%;
     max-width: 1100px;
@@ -518,7 +507,6 @@ button {
     place-items: center;
 }
 
-/****** Skills Cards ******/
 .skill-card {
     box-shadow: 0 8px 80px 0 hsla(180, 5%, 96%, 0.3);
     display: flex;
@@ -608,15 +596,12 @@ button {
     font-size: 0.9rem;
 }
 
-
-/* SEGMENTS DE BORDURE POUR L'ANIMATION */
 .line {
     position: absolute;
     background: #f5f6f6d9;
     z-index: 5;
 }
 
-/* Ligne du haut */
 .top-line {
     top: 0;
     left: 0;
@@ -624,7 +609,6 @@ button {
     width: 0;
 }
 
-/* Ligne de droite */
 .right-line {
     top: 0;
     right: 0;
@@ -632,7 +616,6 @@ button {
     height: 0;
 }
 
-/* Ligne du bas */
 .bottom-line {
     bottom: 0;
     right: 0;
@@ -640,7 +623,6 @@ button {
     width: 0;
 }
 
-/* Ligne de gauche */
 .left-line {
     bottom: 0;
     left: 0;
@@ -656,6 +638,8 @@ button {
 /*****************************************************************************/
 /****************************** Projects Section *****************************/
 /*****************************************************************************/
+
+/****** Project Card ******/
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -675,13 +659,15 @@ button {
     font-family: sans-serif;
 }
 
-.title {
-    font-size: 1.5em;
-    font-weight: 900;
+.front-card-title {
     text-align: center;
     margin: 0;
 }
 
+.project-title{
+    font-family: "poppins-semibold";
+    font-size: 1.5rem;
+}
 
 .project-card-inner {
     position: relative;
@@ -692,7 +678,6 @@ button {
     transform-style: preserve-3d;
     border-radius: 4px;
 }
-
 
 .project-card-front,
 .project-card-back {
@@ -717,8 +702,8 @@ button {
 }
 
 .blur-bg {
-    background: #21252970;
-    backdrop-filter: blur(6px);
+    background: #21252980;
+    backdrop-filter: blur(10px);
     border-radius: 4px;
 }
 
@@ -733,6 +718,43 @@ button {
     font-size: 1rem;
     color: var(--dark-color);
 }
+
+/****************************************************************************/
+/******************************** Modal ************************************/
+.modal{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content{
+    background-color: var(--dark-color);
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title{
+    font-size: 1.25rem;
+    font-family: 'poppins-semibold';
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.modal-text{
+    font-size: 1rem;
+    color: var(--light-color);
+    font-family: 'poppins-regular';
+    margin-bottom:  1.5rem;
+}
+
+
+
+
+
 
 /******************************************************************************/
 /****************************** Responsive Design *****************************/
