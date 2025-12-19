@@ -23,8 +23,8 @@ export default function Projects() {
     return (
 
         <SectionWrapper id="projects">
-            <div className="h-[140px] flex items-center pt-[1rem]">
-                <SectionTitle number="03" title="Projects" />
+            <div className="h-[140px] flex items-center pt-[3rem]">
+                <SectionTitle number="03" title="Mes Projets" />
             </div>
             <div className="flex flex-1 flex-col items-center gap-[1rem] justify-center">
                 <div className="w-3/4 flex flex-col gap-[0.5rem]">
@@ -38,7 +38,7 @@ export default function Projects() {
                 </div>
                 
 
-                <div className="projects-grid mt-64 w-full h-[670px] p-[2rem]">
+                <div className="projects-grid mt-12 w-full p-[2rem]">
 
                     {/* Carte du projet Cutie Panda*/}
                     <ProjectCard

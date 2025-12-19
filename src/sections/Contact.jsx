@@ -51,12 +51,12 @@ export default function Contact() {
     };
 
     const modalRoot = document.getElementById("modal-root");
-    
+
     return (
         <div>
             <SectionWrapper id="contact">
 
-                <div className="h-[140px] flex items-center pt-[1rem]">
+                <div className="h-[140px] flex items-center pt-[3rem]">
                     <SectionTitle number="04" title="Contact" />
                 </div>
 

@@ -10,8 +10,8 @@ export default function Skills() {
     return (
         // Section des compétences utilisant le composant SectionWrapper pour un style cohérent
         <SectionWrapper id="skills">
-            <div className="h-[140px] flex items-center pt-[1rem]">
-                <SectionTitle number="02" title="Skills"/>
+            <div className="h-[140px] flex items-center pt-[3rem]">
+                <SectionTitle number="02" title="Mes compétences"/>
             </div>
             <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">
                 <p className="w-3/4">Malgré ma récente arrivée dans le développement web, j’ai rapidement acquis une solide maîtrise de plusieurs technologies grâce à ma capacité d’apprentissage et ma motivation. J’ai aujourd’hui un socle technique polyvalent qui couvre le front-end, le back-end, les frameworks modernes et les outils de conception.</p>

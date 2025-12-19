@@ -9,13 +9,14 @@ export default function About() {
     return (
         // Section À propos utilisant le composant SectionWrapper
         <SectionWrapper id="about">
-            <div className="h-[140px] flex items-center pt-[1rem]">
-                <SectionTitle number="01" title="About"/>
+            <div className="h-[140px] flex items-center pt-[3rem]">
+                <SectionTitle number="01" title="À propos de moi"/>
             </div>
             <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">
-                <h3 className="about-title self-start">Bonjour, je suis Julien<span className="font-bold text-[3rem] block uppercase">Développeur Web FullStack</span></h3>
+                <h3 className="about-title self-start normal-case">Bonjour, je suis Julien</h3>
                 <div className="flex flex-row gap-[4rem] items-stretch">
                     <div className="flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
+                        <p className="font-['poppins-semibold'] text-[3rem] block uppercase">Développeur Web FullStack</p>
                         <div className="flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
                             <p>Après plus de vingt ans d’expérience dans le secteur de l’optique, dont quinze ans en tant que manager, j’ai choisi de me reconvertir vers le développement web. Cette expérience m’a permis d’acquérir rigueur, sens de l’organisation et gestion de projets, des compétences que je mets aujourd’hui au service de solutions digitales efficaces.</p>
                             <p>Certifié Développeur Web Fullstack, je maîtrise des technologies modernes telles que React.js, Symfony et WordPress, avec une approche orientée qualité, performance et expérience utilisateur.</p>

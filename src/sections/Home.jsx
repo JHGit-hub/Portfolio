@@ -1,11 +1,23 @@
 import React from "react";
+import SectionWrapper from "../components/SectionWrapper";
+import Globe from "../components/globe";
 
 export default function Home() {
 
     return (
-        <section className="max-w-4xl mx-auto px-4 py-16">
-            <h1 className="text-4xl font-bold text-gray-800">Accueil</h1>
-            <p className="mt-4 text-gray-600">Bienvenue sur mon portfolio.</p>
-        </section>
+        <SectionWrapper id="home">
+            <div className="flex items-center">
+                <div className="w-1/2 h-[400px]">
+                    <Globe />
+                </div>
+                <div className="flex h-screen items-center">
+                    <div className="w-1/2">
+                        <h1>Développeur Web</h1>
+                        <p className=" font-['poppins-semibold'] ">React · Symfony · WordPress</p>
+                    </div>
+                </div>
+            </div>
+        </SectionWrapper>
+
     );
 }
