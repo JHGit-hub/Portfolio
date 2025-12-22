@@ -26,10 +26,10 @@ export default function Projects() {
             <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
                 <SectionTitle number="03" title="Mes Projets" />
             </div>
-            <div className="flex flex-1 flex-col items-center gap-[1rem] justify-center">
-                <div className="w-3/4 flex flex-col gap-[0.5rem]">
+            <div className="projects-text flex flex-1 flex-col items-center gap-[1rem] justify-center">
+                <div className="projects-paragraphs w-3/4 flex flex-col gap-[0.5rem]">
                     <p>Mes projets reflètent ma progression, ma capacité d’apprentissage et ma rigueur dans la conception d’applications web. Ils témoignent de ma volonté constante d’évoluer et de créer des solutions fiables et bien structurées.</p>
-                    <div className="flex flex-row gap-[1rem] items-center">
+                    <div className="projects-link flex flex-row gap-[1rem] items-center">
                         <p>Vous pouvez consulter l’ensemble de mes projets et de mes dépôts sur mon profil GitHub</p>
                         <a href="https://github.com/JHGit-hub" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil GitHub">
                             <FaGithub size={20} color="var(--accent-color)"/>

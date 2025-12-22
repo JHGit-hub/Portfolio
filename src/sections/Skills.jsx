@@ -13,8 +13,8 @@ export default function Skills() {
             <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
                 <SectionTitle number="02" title="Mes compétences"/>
             </div>
-            <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">
-                <p className="w-3/4">Malgré ma récente arrivée dans le développement web, j’ai rapidement acquis une solide maîtrise de plusieurs technologies grâce à ma capacité d’apprentissage et ma motivation. J’ai aujourd’hui un socle technique polyvalent qui couvre le front-end, le back-end, les frameworks modernes et les outils de conception.</p>
+            <div className="skills-text flex flex-1 flex-col items-center gap-[2rem] justify-center">
+                <p className="skills-paragraphs w-3/4">Malgré ma récente arrivée dans le développement web, j’ai rapidement acquis une solide maîtrise de plusieurs technologies grâce à ma capacité d’apprentissage et ma motivation. J’ai aujourd’hui un socle technique polyvalent qui couvre le front-end, le back-end, les frameworks modernes et les outils de conception.</p>
 
                 {/* Grille centrée : 1 colonne sur mobile, 2 colonnes dès sm (>=640px) */}
                 <div className="skills-grid mt-64">

@@ -60,22 +60,22 @@ export default function Contact() {
                     <SectionTitle number="04" title="Contact" />
                 </div>
 
-                <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">
-                    <div className="flex flex-row gap-[4rem] items-stretch">
-                        <div className="flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
-                            <div className="flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
+                <div className="contact-container flex flex-1 flex-col items-center gap-[2rem] justify-center">
+                    <div className="contact-content flex flex-row gap-[4rem] items-stretch">
+                        <div className="contact-infos flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
+                            <div className="contact-text flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
                                 <p>Vous avez un projet web ou besoin d’un accompagnement technique ?</p>
                                 <p>Vous souhaitez échanger à propos d’un poste, d’une mission ou d’un projet web ?</p>
                                 <p>Ce formulaire est à votre disposition pour toute prise de contact. Je reste disponible pour discuter de vos besoins et vous apporter une réponse rapide et adaptée.</p>
                             </div>
-                            <div className="flex flex-row items-center gap-[1rem] self-center">
+                            <div className="contact-phone flex flex-row items-center gap-[1rem] self-center">
                                 <p>Appelez-moi</p>
                                 <a href="tel:+33633093294" aria-label="Appeler par téléphone" className="flex gap-[0.5rem] items-center">
                                     <FaPhone size={20} color="var(--accent-color)" />
                                     <span className="font-['poppins-regular'] text-[1.5rem] text-[var(--accent-color)]">06.33.09.32.94.</span>
                                 </a>
                             </div>
-                            <div className="flex flex-row items-center gap-[1rem] self-center">
+                            <div className="contact-mail flex flex-row items-center gap-[1rem] self-center">
                                 <p>Écrivez-moi</p>
                                 <a href="mailto:contact@julien-hardy.fr" className="flex gap-[0.5rem] items-center" aria-label="Envoyer un mail">
                                     <FaEnvelope size={20} color="var(--accent-color)" />
@@ -83,7 +83,7 @@ export default function Contact() {
                                 </a>
                             </div>
                         </div>
-                        <div className="flex-1 max-w-[650px] shrink-0 rounded-[0.25rem] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
+                        <div className="contact-form-wrapper flex-1 max-w-[650px] shrink-0 rounded-[0.25rem] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
                             <ContactForm onSubmit={handleSubmit} />
                         </div>
                     </div>

@@ -6,14 +6,14 @@ export default function ContactForm({ onSubmit }) {
 
         <form 
             onSubmit={onSubmit} 
-            className="w-full flex flex-col gap-[1rem] p-[0.5rem]"
+            className="contact-form w-full flex flex-col gap-[1rem] p-[0.5rem]"
         >
 
             {/* Email */}
-            <div className="flex flex-col gap-[1rem]">
+            <div className="contact-form-group flex flex-col gap-[1rem]">
                 <label
                     htmlFor="email"
-                    className="uppercase font-['poppins-semibold'] text-[1rem] text-[var(--accent-color)]"
+                    className="contact-form-label uppercase font-['poppins-semibold'] text-[1rem] text-[var(--accent-color)]"
                 >
                     Adresse email de l'expéditeur
                 </label>
@@ -23,16 +23,16 @@ export default function ContactForm({ onSubmit }) {
                     name="email"
                     required
                     placeholder="exemple@email.com"
-                    className="w-full rounded-[0.25rem] border border-gray-300 p-[0.5rem] font-['poppins-regular'] text-[1rem]
+                    className="contact-form-input w-full rounded-[0.25rem] border border-gray-300 p-[0.5rem] font-['poppins-regular'] text-[1rem]
                  focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)] radius"
                 />
             </div>
 
             {/* Message */}
-            <div className="flex flex-col gap-[1rem]">
+            <div className="contact-form-group flex flex-col gap-[1rem]">
                 <label
                     htmlFor="message"
-                    className="uppercase font-['poppins-semibold'] text-[1rem] text-[var(--accent-color)]"
+                    className="contact-form-label uppercase font-['poppins-semibold'] text-[1rem] text-[var(--accent-color)]"
                 >
                     Message
                 </label>
@@ -42,13 +42,17 @@ export default function ContactForm({ onSubmit }) {
                     rows="5"
                     required
                     placeholder="Votre message..."
-                    className="w-full rounded-[0.25rem] border border-gray-300 p-[0.5rem] font-['poppins-regular'] text-[1rem] resize-none
+                    className="contact-form-input w-full rounded-[0.25rem] border border-gray-300 p-[0.5rem] font-['poppins-regular'] text-[1rem] resize-none
                  focus:outline-none focus:ring-2 focus:ring-[var(--accent-color)]"
                 />
             </div>
 
             {/* Bouton */}
-            <ActionBtn type="submit" label="envoyer" />
+            <div className="contact-form-submit">
+                <ActionBtn type="submit" label="envoyer" />
+            </div>
+
+
 
         </form>
 
