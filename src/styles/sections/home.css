@@ -1,0 +1,71 @@
+.scroll-arrow {
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+    .home-globe {
+        width: 60%;
+        height: 360px;
+    }
+
+    .home-text {
+        width: 60%;
+    }
+
+    .home-stack {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .scroll-arrow {
+        bottom: 10%;
+    }
+}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .home-hero {
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .home-globe {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120vw;
+        height: 120vw;
+        opacity: 0.3;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .home-text-wrapper {
+        justify-content: center;
+    }
+
+    .home-text {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .home-stack {
+        justify-content: center;
+    }
+
+    .scroll-arrow {
+        display: none;
+    }
+}

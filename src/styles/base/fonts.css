@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "poppins-regular";
+    src: url(../../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: "poppins-medium";
+    src: url(../../assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: "poppins-semibold";
+    src: url(../../assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "grotesk-regular";
+    src: url(../../assets/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: "grotesk-medium";
+    src: url(../../assets/fonts/SpaceGrotesk-Medium.ttf);
+}
+
+@font-face {
+    font-family: "grotesk-semibold";
+    src: url(../../assets/fonts/SpaceGrotesk-SemiBold.ttf);
+}
+
+h1 {
+    font-family: "grotesk-semibold";
+    color: #F5F6F6;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "grotesk-medium";
+    color: #F5F6F6;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: "grotesk-semibold";
+    color: rgb(245, 246, 246, 0.2);
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: "poppins-regular";
+    color: #F5F6F6;
+    font-size: 1rem;
+}
+
+a {
+    font-family: "poppins-regular";
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    a {
+        font-size: 1.25rem;
+    }
+}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px){
+
+    h1 {
+        font-size: 2.75rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    a {
+        font-size: 1.1rem;
+    }
+    
+}

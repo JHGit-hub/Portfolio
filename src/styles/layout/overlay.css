@@ -1,0 +1,101 @@
+.section-title-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title-front {
+    position: relative;
+    color: var(--light-color);
+    margin-left: 6.5rem;
+    z-index: 2;
+}
+
+.section-title-back {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 7rem;
+    font-family: "poppins-semibold";
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: transparent;
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.05));
+    -webkit-background-clip: text;
+    background-clip: text;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+    .section-title-container {
+        height: 110px;
+        padding-top: 2rem;
+    }
+
+    .section-title-front {
+        font-size: 3rem;
+    }
+
+    .section-title-back {
+        font-size: 6rem;
+    }
+}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .overlay-side {
+        display: none;
+    }
+
+    .section-wrapper {
+        height: auto;
+        min-height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .section-wrapper-content {
+        padding: 0 0.25rem;
+        width: 100%;
+    }
+
+    .section-title-container {
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .section-title-wrapper {
+        width: auto;
+        text-align: center;
+    }
+
+    .section-title-front {
+        margin-left: 0;
+        font-size: 2rem;
+        line-height: 1.2;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .section-title-back {
+        font-size: 4rem;
+        opacity: 0.25;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: none;
+        color: #ffffff50;
+    }
+}

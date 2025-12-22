@@ -1,0 +1,405 @@
+/****** Primary Button ******/
+.primary-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.primary-btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: #212529;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.primary-btn::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: #212529;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+}
+
+.primary-btn:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+}
+
+.primary-btn:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+}
+
+.primary-btn:hover {
+    border: 2px solid #ffffff;
+}
+
+.primary-btn span {
+    position: relative;
+    z-index: 3;
+}
+
+button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}
+
+/****** Secondary Button ******/
+.secondary-btn {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.secondary-btn.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+.secondary-btn.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--accent-color);
+    border-radius: 1.625rem;
+}
+
+.secondary-btn.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--dark-color);
+}
+
+.secondary-btn.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.secondary-btn.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid var(--dark-color);
+    border-right: 0.125rem solid var(--dark-color);
+    transform: rotate(45deg);
+}
+
+.secondary-btn.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 2.5rem;
+    color: var(--light-color);
+    font-family: "Poppins-SemiBold";
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.secondary-btn:hover .circle {
+    width: 100%;
+}
+
+.secondary-btn:hover .circle .icon.arrow {
+    background: var(--dark-color);
+    transform: translate(1rem, 0);
+}
+
+.secondary-btn:hover .button-text {
+    color: var(--dark-color);
+}
+
+.secondary-btn .button-text {
+    color: var(--light-color);
+}
+
+/****** Donwload Button ******/
+.Download-Btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.svgIcon {
+    color: var(--light-color);
+}
+
+
+.svgIconInit {
+    display: block;
+    line-height: 1;
+    transform: translateY(-20%);
+}
+
+
+.svgIconInit,
+.svgIcon {
+    font-size: 18px;
+}
+
+.divSvgIconInit {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+}
+
+.icon2 {
+    width: 18px;
+    height: 5px;
+    transform: translateY(-100%);
+    border-bottom: 2px solid var(--light-color);
+    border-left: 2px solid var(--light-color);
+    border-right: 2px solid var(--light-color);
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 12px;
+    transform: translateY(-50%);
+    opacity: 0;
+    background-color: #0c0c0c;
+    color: var(--light-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #0c0c0c;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.Download-Btn:hover .tooltip {
+    opacity: 1;
+    transition-duration: .3s;
+}
+
+.Download-Btn:hover {
+    background-color: var(--accent-color);
+    transition-duration: .3s;
+}
+
+.Download-Btn:hover .svgIcon {
+    color: var(--light-color);
+}
+
+.Download-Btn:hover .icon2 {
+    border-bottom: 2px solid var(--light-color);
+    border-left: 2px solid var(--light-color);
+    border-right: 2px solid var(--light-color);
+}
+
+.Download-Btn:hover .tooltip {
+    opacity: 1;
+}
+
+/****** Action Button ******/
+.action-btn {
+    position: relative;
+    display: inline-block;
+    margin: 0 1rem;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.action-btn.action {
+    width: 12rem;
+    height: auto;
+}
+
+.action-btn.action .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--accent-color);
+    border-radius: 1.625rem;
+}
+
+.action-btn.action .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--dark-color);
+}
+
+.action-btn.action .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.action-btn.action .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid var(--dark-color);
+    border-right: 0.125rem solid var(--dark-color);
+    transform: rotate(45deg);
+}
+
+.action-btn.action .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 2.5rem;
+    color: var(--light-color);
+    font-family: "Poppins-SemiBold";
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.action-btn:hover .circle {
+    width: 100%;
+}
+
+.action-btn:hover .circle .icon.arrow {
+    background: var(--dark-color);
+    transform: translate(1rem, 0);
+}
+
+.action-btn:hover .button-text {
+    color: var(--dark-color);
+}
+
+.action-btn .button-text {
+    color: var(--light-color);
+}
+
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .primary-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+        border-width: 1px;
+    }
+
+    .Download-Btn {
+        width: 56px;
+        height: 56px;
+    }
+
+    .svgIconInit,
+    .svgIcon {
+        font-size: 20px;
+    }
+
+    .tooltip {
+        display: none;
+    }
+
+    .action-btn {
+        margin: 0.75rem 0;
+    }
+
+    .action-btn.action {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .action-btn.action .circle {
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    .action-btn.action .button-text {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,189 @@
+.skill-card {
+    box-shadow: 0 8px 80px 0 hsla(180, 5%, 96%, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 460px;
+    min-height: 200px;
+    background: #1d1f21;
+    padding: 25px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.skill-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: rgba(245, 246, 246, 0.2);
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.corner {
+    position: absolute;
+    z-index: 10;
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 0;
+    border-top: 4px solid #f5f6f6d9;
+}
+
+.top-left::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 60px;
+    border-left: 4px solid #f5f6f6d9;
+}
+
+.bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 0;
+    border-bottom: 4px solid #f5f6f6d9;
+}
+
+.bottom-right::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 60px;
+    border-right: 4px solid #f5f6f6d9;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F5F6F6;
+}
+
+.item span {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.line {
+    position: absolute;
+    background: #f5f6f6d9;
+    z-index: 5;
+}
+
+.top-line {
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+}
+
+.right-line {
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0;
+}
+
+.bottom-line {
+    bottom: 0;
+    right: 0;
+    height: 4px;
+    width: 0;
+}
+
+.left-line {
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+}
+
+.corner {
+    position: absolute;
+    z-index: 10;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+    .skill-card {
+        width: 380px;
+        min-height: 180px;
+        padding: 20px;
+    }
+
+    .skill-title {
+        font-size: 4.5rem;
+    }
+
+    .icons {
+        gap: 25px;
+    }
+
+    .item span {
+        font-size: 0.85rem;
+    }
+
+}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .skill-card {
+        width: 90%;
+        min-height: auto;
+        padding: 18px 15px;
+    }
+
+    .skill-title {
+        font-size: 3.2rem;
+    }
+
+    .icons {
+        gap: 20px;
+    }
+
+    .item svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .item span {
+        font-size: 0.8rem;
+    }
+
+    .top-left,
+    .bottom-right {
+        width: 40px;
+    }
+
+    .top-left::after,
+    .bottom-right::after {
+        height: 40px;
+    }
+}

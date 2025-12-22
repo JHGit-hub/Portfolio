@@ -1,0 +1,52 @@
+html,
+body {
+    overflow: hidden;
+}
+
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#container {
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+.background-overlay {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/****** COLORS ******/
+:root {
+    --light-color: #F5F6F6;
+    --dark-color: #212529;
+    --accent-color: #00A288;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    section {
+        height: auto;
+        min-height: 100vh;
+    }
+}

@@ -1,0 +1,47 @@
+.skills-grid {
+    width: 100%;
+    max-width: 1100px;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    place-items: center;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+
+    .skills-paragraphs {
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+
+    .skills-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-paragraphs {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+        margin-top: 2rem;
+    }
+}

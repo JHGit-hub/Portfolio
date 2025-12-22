@@ -1,0 +1,52 @@
+.modal {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--dark-color);
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-family: 'poppins-semibold';
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.modal-text {
+    font-size: 1rem;
+    color: var(--light-color);
+    font-family: 'poppins-regular';
+    margin-bottom: 1.5rem;
+}
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 1.25rem;
+        max-width: 90%;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .modal-text {
+        font-size: 0.95rem;
+        text-align: center;
+        line-height: 1.5;
+    }
+}

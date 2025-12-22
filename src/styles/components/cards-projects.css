@@ -1,0 +1,91 @@
+.project-card {
+    background-color: transparent;
+    width: 300px;
+    height: 230px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.front-card-title {
+    text-align: center;
+    margin: 0;
+}
+
+.project-title {
+    font-family: "grotesk-semibold";
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+}
+
+.project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 4px;
+}
+
+.project-card-front,
+.project-card-back {
+    box-shadow: 0 8px 30px 0 hsla(180, 5%, 96%, 0.3);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 4px;
+}
+
+
+.blur-bg,
+.blur-bg-back {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.blur-bg {
+    background: #21252990;
+    backdrop-filter: blur(10px);
+}
+
+.blur-bg-back {
+    background-color: #F5F6F640;
+    backdrop-filter: blur(8px);
+    border-radius: 4px;
+}
+
+.techno-description {
+    font-family: "poppins-semibold";
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .project-card {
+        width: 90%;
+        height: 220px;
+    }
+
+    .projects-link {
+        flex-direction: column;
+    }
+
+    .projects-link svg {
+        width: 56px;
+        height: 56px;
+    }
+}

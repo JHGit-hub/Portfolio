@@ -1,0 +1,30 @@
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
+
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {}
+
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .contact-form-input,
+    .contact-form-textarea {
+        font-size: 1rem;
+    }
+
+    .contact-form-submit {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
