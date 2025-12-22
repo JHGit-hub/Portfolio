@@ -8,21 +8,24 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     overflow: hidden;
 }
 
 
-html, body, #root {
-  height: 100%;
+html,
+body,
+#root {
+    height: 100%;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 #container {
-  height: 100vh;
+    height: 100vh;
 }
 
 .footer {
@@ -30,7 +33,7 @@ html {
     backdrop-filter: blur(6px);
 }
 
-.background-overlay{
+.background-overlay {
     top: 0;
     left: 0;
     width: 100vw;
@@ -61,22 +64,37 @@ html {
     src: url(../public/fonts/Poppins-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: "grotesk-regular";
+    src: url(../public/fonts/SpaceGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: "grotesk-medium";
+    src: url(../public/fonts/SpaceGrotesk-Medium.ttf);
+}
+
+@font-face {
+    font-family: "grotesk-semibold";
+    src: url(../public/fonts/SpaceGrotesk-SemiBold.ttf);
+}
+
 h1 {
-    font-family: "poppins-semibold";
+    font-family: "grotesk-semibold";
     color: #F5F6F6;
     font-size: 6rem;
     text-transform: uppercase;
 }
 
 h2 {
-    font-family: "poppins-medium";
+    font-family: "grotesk-medium";
     color: #F5F6F6;
     text-transform: uppercase;
     font-size: 4rem;
 }
 
 h3 {
-    font-family: "poppins-semibold";
+    font-family: "grotesk-semibold";
     color: rgb(245, 246, 246, 0.2);
     font-size: 4rem;
     text-transform: uppercase;
@@ -290,7 +308,8 @@ button {
 }
 
 
-.svgIconInit, .svgIcon {
+.svgIconInit,
+.svgIcon {
     font-size: 18px;
 }
 
@@ -503,10 +522,19 @@ button {
 }
 
 /****** About Title *******/
-.about-title{
+.about-title {
     font-family: "poppins-medium";
     color: #F5F6F6;
     font-size: 5rem;
+}
+
+/****************************************************************************/
+/****************************** Home Section ******************************/
+/****************************************************************************/
+.scroll-arrow {
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /****************************************************************************/
@@ -680,9 +708,10 @@ button {
     margin: 0;
 }
 
-.project-title{
-    font-family: "poppins-semibold";
+.project-title {
+    font-family: "grotesk-semibold";
     font-size: 1.5rem;
+    letter-spacing: 4px;
 }
 
 .project-card-inner {
@@ -714,13 +743,11 @@ button {
     position: absolute;
     inset: 0;
     z-index: 0;
-    border-radius: 4px;
 }
 
 .blur-bg {
-    background: #21252980;
+    background: #21252990;
     backdrop-filter: blur(10px);
-    border-radius: 4px;
 }
 
 .blur-bg-back {
@@ -736,8 +763,9 @@ button {
 }
 
 /****************************************************************************/
-/******************************** Modal ************************************/
-.modal{
+/********************************* Modal ************************************/
+/****************************************************************************/
+.modal {
     top: 0;
     left: 0;
     right: 0;
@@ -747,24 +775,24 @@ button {
     backdrop-filter: blur(4px);
 }
 
-.modal-content{
+.modal-content {
     background-color: var(--dark-color);
     max-width: 500px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
-.modal-title{
+.modal-title {
     font-size: 1.25rem;
     font-family: 'poppins-semibold';
     color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.modal-text{
+.modal-text {
     font-size: 1rem;
     color: var(--light-color);
     font-family: 'poppins-regular';
-    margin-bottom:  1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -778,15 +806,210 @@ button {
 
 /* format tablette */
 @media (max-width: 1024px) {
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    a {
+        font-size: 1.25rem;
+    }
+
+    .section-title-container {
+        height: 110px;
+        padding-top: 2rem;
+    }
+
+    .section-title-front {
+        font-size: 3rem;
+    }
+
+    .section-title-back {
+        font-size: 6rem;
+    }
+
+    .about-content {
+        gap: 2.5rem;
+    }
+
+    .about-paragraphs {
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    .about-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .about-image {
+        max-width: 520px;
+    }
+
+    .footer {
+        padding: 0 0.75rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         height: auto;
-        /* facultatif : sinon les cartes risquent de dépasser */
+    }
+
+    .home-globe {
+        width: 60%;
+        height: 360px;
+    }
+
+    .home-text {
+        width: 60%;
+    }
+
+    .home-stack {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .scroll-arrow {
+        bottom: 10%;
     }
 }
 
 /* format mobile */
 @media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.75rem;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    a {
+        font-size: 1.1rem;
+    }
+
+    .primary-btn {
+        padding: 8px 14px;
+        font-size: 14px;
+        border-width: 1px;
+    }
+
+    .header {
+        margin: 0.5rem;
+    }
+
+    .header img {
+        height: 3rem;
+        width: 3rem;
+        margin: 0.5rem;
+    }
+
+    .section-wrapper {
+        padding: 0 0.25rem;
+        width: 100%;
+    }
+
+    .section-title-container {
+        height: auto;
+        padding-top: 4rem;
+        padding-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .section-title-wrapper {
+        width: auto;
+        text-align: center;
+    }
+
+    .section-title-front {
+        margin-left: 0;
+        font-size: 2rem;
+        line-height: 1.2;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .section-title-back {
+        font-size: 4rem;
+        opacity: 0.25;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: none;
+        color: #ffffff50;
+    }
+
+    .about-container {
+        justify-content: flex-start;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-title {
+        align-self: center;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .about-image {
+        width: 70%;
+        max-width: none;
+    }
+
+    .about-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-paragraphs {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .about-cta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer,
+    .overlay-side {
+        display: none;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
@@ -794,5 +1017,43 @@ button {
     .projects-grid {
         grid-template-columns: 1fr;
         height: auto;
+    }
+
+    .home-hero {
+        overflow: hidden;
+        justify-content: center;
+    }
+
+    .home-globe {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 120vw;
+        height: 120vw;
+        opacity: 0.3;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .home-text-wrapper {
+        justify-content: center;
+    }
+
+    .home-text {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .home-stack {
+        justify-content: center;
+    }
+
+    .scroll-arrow {
+        display: none;
     }
 }

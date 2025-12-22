@@ -10,7 +10,7 @@ export default function Skills() {
     return (
         // Section des compétences utilisant le composant SectionWrapper pour un style cohérent
         <SectionWrapper id="skills">
-            <div className="h-[140px] flex items-center pt-[3rem]">
+            <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
                 <SectionTitle number="02" title="Mes compétences"/>
             </div>
             <div className="flex flex-1 flex-col items-center gap-[2rem] justify-center">

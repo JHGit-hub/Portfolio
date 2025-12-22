@@ -1,11 +1,14 @@
 // src/components/Globe.jsx
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 
 function WireGlobe() {
     const meshRef = useRef();
+    const { size } = useThree();
 
+    const radius = size.width < 768 ? 3 : 3.3;
+    
     // Rotation lente automatique
     useFrame(() => {
         if (meshRef.current) {
@@ -15,7 +18,7 @@ function WireGlobe() {
 
     return (
         <mesh ref={meshRef}>
-            <sphereGeometry args={[3.3, 40, 40]} />
+            <sphereGeometry args={[radius, 40, 40]} />
             <meshBasicMaterial
                 color="#00A288"
                 wireframe

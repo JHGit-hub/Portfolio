@@ -23,7 +23,7 @@ export default function Projects() {
     return (
 
         <SectionWrapper id="projects">
-            <div className="h-[140px] flex items-center pt-[3rem]">
+            <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
                 <SectionTitle number="03" title="Mes Projets" />
             </div>
             <div className="flex flex-1 flex-col items-center gap-[1rem] justify-center">
