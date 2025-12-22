@@ -82,7 +82,7 @@
     }
 
     .section-title-front {
-        margin-left: 0;
+        margin-left: 1rem;
         font-size: 2rem;
         line-height: 1.2;
         text-align: center;
@@ -92,10 +92,10 @@
     .section-title-back {
         font-size: 4rem;
         opacity: 0.25;
-        top: 50%;
-        left: 50%;
+        top: 0;
+        left: 0;
         transform: translate(-50%, -50%);
         background: none;
-        color: #ffffff50;
+        color: #ffffff80;
     }
 }

@@ -49,4 +49,13 @@ li {
         height: auto;
         min-height: 100vh;
     }
+
+    #container {
+        height: auto;
+        min-height: auto;
+    }
+
+    body {
+        overflow-y: auto;
+    }
 }
