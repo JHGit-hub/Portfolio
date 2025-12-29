@@ -7,6 +7,7 @@ import About from "./sections/About.jsx";
 import Skills from "./sections/Skills.jsx";
 import Projects from "./sections/Projects.jsx";
 import Contact from './sections/Contact.jsx';
+import FooterNavMobile from './components/FooterNavMobil.jsx';
 import BackgroundOverlay from './components/BackgroundOverlay.jsx';
 import useScrollSnap from './hooks/useScrollSnap.js';
 
@@ -31,6 +32,7 @@ export default function App() {
                 </div>
             </main>
 
+            <FooterNavMobile />
             <Footer />
         </div>
 

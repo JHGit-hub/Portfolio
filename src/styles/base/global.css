@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    scroll-margin-top: 90px;
+}
+
 #container {
     height: 100vh;
 }
@@ -45,6 +49,7 @@ li {
     section {
         height: auto;
         min-height: 100vh;
+        scroll-margin-top: 60px;
     }
 
     #container {
@@ -58,6 +63,7 @@ li {
     }
 
     body {
+        padding-bottom: 56px;
         overflow-y: auto;
         scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;

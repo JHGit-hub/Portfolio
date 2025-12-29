@@ -68,6 +68,8 @@
 
     .about-cta {
         flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 4rem;
         gap: 1rem;
     }
 }
