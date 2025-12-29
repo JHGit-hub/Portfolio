@@ -1,30 +1,40 @@
-import logo from '../assets/images/logo_JH_white.svg';
-import PrimaryBtn from './buttons/PrimaryBtn.jsx';
-import useIsDesktop from '../hooks/useIsDesktop.js';
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+    place-items: center;
+}
 
-export default function Logo({ onNavigate }) {
+/******************************************************************************/
+/****************************** Responsive Design *****************************/
+/******************************************************************************/
 
-    const isDesktop = useIsDesktop();
+/****************************** format tablette *****************************/
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+    }
+}
 
-    return (
-        <div className="header flex flex-row justify-between items-center m-[1rem]">
+/****************************** format mobile *****************************/
+@media (max-width: 768px) {
+    .projects-text {
+        align-items: center;
+        text-align: center;
+    }
 
-            {isDesktop ? (
-                <button onClick={() => onNavigate(0)} className="cursor-pointer flex fixed top-[0px] left-[0px] z-50" title="Retour à l'accueil">
-                    <img src={logo} alt="Logo Julien Hardy" className="h-[4rem] w-[4rem] m-[1rem]" />
-                </button>
-            ) : (
-                <a href="#home" className="flex fixed top-[0px] left-[0px] z-50" aria-label="Retour à l'accueil">
-                    <img src={logo} alt="Logo Julien Hardy" className="h-[4rem] w-[4rem] m-[1rem]"/>
-                </a>
-            )}
+    .projects-paragraphs {
+        width: 100%;
+        font-size: 0.95rem;
+    }
 
-            <div className="flex fixed top-[0px] right-[0px] z-50 m-[1rem]">
-                <PrimaryBtn 
-                    label="Contact"
-                    onClick={isDesktop ? () => onNavigate(4) : undefined} 
-                    to={!isDesktop ? "#contact" : undefined }/>
-            </div>
-        </div>
-    )
+    .projects-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 3rem;
+    }
 }

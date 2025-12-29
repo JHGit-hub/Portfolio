@@ -33,8 +33,22 @@
     }
 
     .projects-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-        gap: 3rem;
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 1rem;
+    }
+
+    .projects-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card-container {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
     }
 }

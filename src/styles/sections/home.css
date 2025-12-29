@@ -73,4 +73,8 @@
     .home-stack {
         justify-content: center;
     }
+
+    .scroll-arrow {
+        bottom: 24%;
+    }
 }
