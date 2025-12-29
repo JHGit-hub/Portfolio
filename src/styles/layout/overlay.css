@@ -32,6 +32,14 @@
     user-select: none;
 }
 
+.overlay-indicator {
+    width: 3px;
+    height: 14px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transition: transform 0.35s ease;
+}
+
 /******************************************************************************/
 /****************************** Responsive Design *****************************/
 /******************************************************************************/

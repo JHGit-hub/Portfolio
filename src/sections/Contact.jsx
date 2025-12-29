@@ -56,7 +56,7 @@ export default function Contact() {
         <div>
             <SectionWrapper id="contact">
 
-                <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
+                <div className="section-contact section-title-container h-[140px] flex items-center pt-[3rem]">
                     <SectionTitle number="04" title="Contact" />
                 </div>
 

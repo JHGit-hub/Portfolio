@@ -21,6 +21,11 @@
 
 /****************************** format mobile *****************************/
 @media (max-width: 768px) {
+
+    .section-contact{
+        margin-top: 4rem;
+    }
+
     .contact-container {
         justify-content: flex-start;
     }

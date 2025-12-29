@@ -28,6 +28,7 @@ export default function Home() {
                     <div className="home-text w-1/2 flex flex-col gap-[0.25rem]">
                         <p className="uppercase tracking-widest font-['poppins-regular'] text-[1.25rem] text-[var(--accent-color)]">Julien Hardy</p>
                         <h1>Développeur Web</h1>
+                        <h2 className="subtitle">Full-Stack</h2>
                         <p className="home-stack font-['poppins-semibold'] flex gap-[0.25rem] items-center">
                             PHP <FaDiamond size={6} color="var(--accent-color)" /> React <FaDiamond size={6} color="var(--accent-color)" /> Symfony <FaDiamond size={6} color="var(--accent-color)" /> WordPress</p>
                     </div>

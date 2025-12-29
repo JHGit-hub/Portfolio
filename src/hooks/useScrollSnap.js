@@ -1,6 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function useScrollSnap(containerId = "container") {
+
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const currentIndex = useRef(0);
     const isScrolling = useRef(false);
@@ -28,30 +30,13 @@ export default function useScrollSnap(containerId = "container") {
 
             if (Math.abs(wheelDelta.current) < SCROLL_THRESHOLD) return;
 
-            isScrolling.current = true;
-
-            if (
-                wheelDelta.current > 0 &&
-                currentIndex.current < sections.current.length - 1
-            ) {
-                currentIndex.current += 1;
-            } else if (
-                wheelDelta.current < 0 &&
-                currentIndex.current > 0
-            ) {
-                currentIndex.current -= 1;
-            }
-
-            sections.current[currentIndex.current].scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
+            navigateTo(
+                wheelDelta.current > 0
+                    ? currentIndex.current + 1
+                    : currentIndex.current - 1
+            );
 
             wheelDelta.current = 0;
-
-            setTimeout(() => {
-                isScrolling.current = false;
-            }, scrollLockDelay);
         };
 
         window.addEventListener("wheel", handleWheel, { passive: false });
@@ -61,4 +46,25 @@ export default function useScrollSnap(containerId = "container") {
         };
         
     }, [containerId]);
+
+    const navigateTo = (index) => {
+        if (index < 0 || index >= sections.current.length) return;
+        if (isScrolling.current) return;
+
+        isScrolling.current = true;
+        currentIndex.current = index;
+        setActiveIndex(index);
+
+        sections.current[index].scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+
+        setTimeout(() => {
+            isScrolling.current = false;
+        }, scrollLockDelay);
+    };
+
+    return { activeIndex, navigateTo };
+
 }

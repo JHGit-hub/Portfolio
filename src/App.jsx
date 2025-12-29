@@ -12,14 +12,14 @@ import useScrollSnap from './hooks/useScrollSnap.js';
 
 export default function App() {
 
-    useScrollSnap("container");
+    const { activeIndex, navigateTo } = useScrollSnap("container");
 
     return (
 
         <div>
             <BackgroundOverlay />
-            <Header />
-            <OverlaySideRight />
+            <Header onNavigate={navigateTo}/>
+            <OverlaySideRight activeIndex={activeIndex} onNavigate={navigateTo}/>
 
             <main className="relative z-10">
                 <div id="container">
