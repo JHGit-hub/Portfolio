@@ -11,12 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    scroll-margin-top: 90px;
-}
 
 #container {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 li {
@@ -27,7 +24,7 @@ li {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /****** COLORS ******/

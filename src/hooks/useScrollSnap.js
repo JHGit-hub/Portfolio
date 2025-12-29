@@ -30,11 +30,9 @@ export default function useScrollSnap(containerId = "container") {
 
             if (Math.abs(wheelDelta.current) < SCROLL_THRESHOLD) return;
 
-            navigateTo(
-                wheelDelta.current > 0
-                    ? currentIndex.current + 1
-                    : currentIndex.current - 1
-            );
+            const nextIndex = wheelDelta.current > 0 ? currentIndex.current + 1 : currentIndex.current - 1;
+
+            navigateTo(nextIndex);
 
             wheelDelta.current = 0;
         };

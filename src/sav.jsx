@@ -1,40 +1,68 @@
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    gap: 1rem;
-    width: 100%;
-    padding: 2rem;
-    place-items: center;
-}
+import { useEffect, useRef, useState } from "react";
 
-/******************************************************************************/
-/****************************** Responsive Design *****************************/
-/******************************************************************************/
+export default function useScrollSnap(containerId = "container") {
 
-/****************************** format tablette *****************************/
-@media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        height: auto;
-    }
-}
+    const [activeIndex, setActiveIndex] = useState(0);
 
-/****************************** format mobile *****************************/
-@media (max-width: 768px) {
-    .projects-text {
-        align-items: center;
-        text-align: center;
-    }
+    const currentIndex = useRef(0);
+    const isScrolling = useRef(false);
+    const sections = useRef([]);
+    const scrollLockDelay = 900;
 
-    .projects-paragraphs {
-        width: 100%;
-        font-size: 0.95rem;
-    }
+    const wheelDelta = useRef(0);
+    const SCROLL_THRESHOLD = 40;
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-        gap: 3rem;
-    }
+    useEffect(() => {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile) return;
+
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        sections.current = Array.from(container.querySelectorAll("section"));
+
+        const handleWheel = (e) => {
+            e.preventDefault();
+
+            if (isScrolling.current) return;
+
+            wheelDelta.current += e.deltaY;
+
+            if (Math.abs(wheelDelta.current) < SCROLL_THRESHOLD) return;
+
+            const nextIndex = wheelDelta.current > 0 ? currentIndex.current + 1 : currentIndex.current - 1;
+
+            navigateTo(nextIndex);
+
+            wheelDelta.current = 0;
+        };
+
+        window.addEventListener("wheel", handleWheel, { passive: false });
+
+        return () => {
+            window.removeEventListener("wheel", handleWheel);
+        };
+        
+    }, [containerId]);
+
+    const navigateTo = (index) => {
+        if (index < 0 || index >= sections.current.length) return;
+        if (isScrolling.current) return;
+
+        isScrolling.current = true;
+        currentIndex.current = index;
+        setActiveIndex(index);
+
+        sections.current[index].scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+
+        setTimeout(() => {
+            isScrolling.current = false;
+        }, scrollLockDelay);
+    };
+
+    return { activeIndex, navigateTo };
+
 }
