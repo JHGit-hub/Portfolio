@@ -1,3 +1,5 @@
+// Section "Compétences" présentant les domaines techniques et les outils maîtrisés
+
 import SectionWrapper from "../components/SectionWrapper";
 import SectionTitle from "../components/SectionTitle";
 import SkillCard from "../components/SkillCard";
@@ -8,15 +10,19 @@ import { VscVscode } from "react-icons/vsc";
 export default function Skills() {
 
     return (
-        // Section des compétences utilisant le composant SectionWrapper pour un style cohérent
+
         <SectionWrapper id="skills">
+
+            {/* En-tête de la section */}
             <div className="section-title-container h-[140px] flex items-center pt-[3rem]">
                 <SectionTitle number="02" title="Mes compétences"/>
             </div>
+
+            {/* Présentation de la section */}
             <div className="skills-text flex flex-1 flex-col items-center gap-[2rem] justify-center">
                 <p className="skills-paragraphs w-3/4">Malgré ma récente arrivée dans le développement web, j’ai rapidement acquis une solide maîtrise de plusieurs technologies grâce à ma capacité d’apprentissage et ma motivation. J’ai aujourd’hui un socle technique polyvalent qui couvre le front-end, le back-end, les frameworks modernes et les outils de conception.</p>
 
-                {/* Grille centrée : 1 colonne sur mobile, 2 colonnes dès sm (>=640px) */}
+                {/* Grille de présentation des compétences */}
                 <div className="skills-grid mt-64">
 
                     {/* Carte de compétence pour le développement Front-End */}

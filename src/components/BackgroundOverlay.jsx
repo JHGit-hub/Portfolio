@@ -1,3 +1,5 @@
+// Composant d’arrière-plan global avec image et overlay de couleur
+
 import BackgroundLogo from '../assets/images/background.jpg';
 export default function BackgroundOverlay() {
 

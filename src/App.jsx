@@ -13,15 +13,18 @@ import useScrollSnap from './hooks/useScrollSnap.js';
 
 export default function App() {
 
+    {/* constante pour scroll snap one-shot */}
     const { activeIndex, navigateTo } = useScrollSnap("container");
 
     return (
 
         <div>
+            {/* Intégration du header, du background et du menu latéral */}
             <BackgroundOverlay />
             <Header onNavigate={navigateTo}/>
             <OverlaySideRight activeIndex={activeIndex} onNavigate={navigateTo}/>
 
+            {/* Intégration des différentes sections */}
             <main className="relative z-10">
                 <div id="container">
                     <Home />
@@ -32,6 +35,7 @@ export default function App() {
                 </div>
             </main>
 
+            {/* Intégration des footers */}
             <FooterNavMobile />
             <Footer />
         </div>
