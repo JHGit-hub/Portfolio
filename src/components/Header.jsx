@@ -1,10 +1,10 @@
 import logo from '../assets/images/logo_JH_white.svg';
 import PrimaryBtn from './buttons/PrimaryBtn.jsx';
-import useIsDesktop from "../hooks/useIsDesktop.jsx";
+import useIsDesktop from '../hooks/useIsDesktop.js';
 
 export default function Logo({ onNavigate }) {
 
-    const isDesktop = useIsDesktop;
+    const isDesktop = useIsDesktop();
 
     return (
         <div className="header flex flex-row justify-between items-center m-[1rem]">
@@ -14,7 +14,7 @@ export default function Logo({ onNavigate }) {
                     <img src={logo} alt="Logo Julien Hardy" className="h-[4rem] w-[4rem] m-[1rem]" />
                 </button>
             ) : (
-                <a href="#home" className="flex fixed top-0 left-0 z-50" aria-label="Retour à l'accueil">
+                <a href="#home" className="flex fixed top-[0px] left-[0px] z-50" aria-label="Retour à l'accueil">
                     <img src={logo} alt="Logo Julien Hardy" className="h-[4rem] w-[4rem] m-[1rem]"/>
                 </a>
             )}

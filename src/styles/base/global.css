@@ -1,12 +1,9 @@
-html,
-body {
+html, body {
     overflow: hidden;
 }
 
 
-html,
-body,
-#root {
+html, body, #root {
     height: 100%;
 }
 
@@ -55,7 +52,15 @@ li {
         min-height: auto;
     }
 
+    html, body, #root {
+        height: auto;
+        overflow: visible;
+    }
+
     body {
         overflow-y: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     }
+
 }
