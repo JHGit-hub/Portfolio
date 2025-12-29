@@ -1,5 +1,5 @@
 .skill-card {
-    box-shadow: 0 8px 80px 0 hsla(180, 5%, 96%, 0.3);
+    box-shadow: 0 8px 70px 0 hsla(180, 5%, 96%, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     left: 0;
     font-size: 5.5rem;
     font-weight: 700;
-    color: rgba(245, 246, 246, 0.2);
+    color: rgba(245, 246, 246, 0.1);
     text-transform: uppercase;
     pointer-events: none;
     user-select: none;
@@ -156,12 +156,14 @@
 @media (max-width: 768px) {
     .skill-card {
         width: 90%;
-        min-height: auto;
+        min-height: 180px;
         padding: 18px 15px;
+        box-shadow: 0 8px 40px 0 hsla(180, 5%, 96%, 0.2);
     }
 
     .skill-title {
         font-size: 3.2rem;
+        opacity: 0.8;
     }
 
     .icons {
@@ -169,8 +171,8 @@
     }
 
     .item svg {
-        width: 48px;
-        height: 48px;
+        width: 45px;
+        height: 45px;
     }
 
     .item span {
