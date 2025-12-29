@@ -1,4 +1,5 @@
-// Composant réutilisable d’affichage du titre des sections
+// Composant SectionTitle
+// Affiche le titre d’une section avec un numéro en arrière-plan.
 
 export default function SectionTitle({ number, title }) {
 

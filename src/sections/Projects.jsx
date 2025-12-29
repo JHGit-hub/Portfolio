@@ -33,7 +33,9 @@ export default function Projects() {
 
             {/* Présentation de la section */}
             <div className="projects-text flex flex-1 flex-col items-center gap-[1rem] justify-center">
+
                 <div className="projects-paragraphs w-3/4 flex flex-col gap-[0.5rem]">
+
                     <p>Mes projets reflètent ma progression, ma capacité d’apprentissage et ma rigueur dans la conception d’applications web. Ils témoignent de ma volonté constante d’évoluer et de créer des solutions fiables et bien structurées.</p>
                     <div className="projects-link flex flex-row gap-[1rem] items-center">
                         <p>Vous pouvez consulter l’ensemble de mes projets et de mes dépôts sur mon profil GitHub</p>
@@ -43,6 +45,7 @@ export default function Projects() {
                             <FaGithub size={20} color="var(--accent-color)"/>
                         </a>
                     </div>
+
                 </div>
                 
 
@@ -146,7 +149,9 @@ export default function Projects() {
                     />
 
                 </div>
+
             </div>
+            
         </SectionWrapper>
 
     );

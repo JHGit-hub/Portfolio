@@ -1,7 +1,11 @@
+// Composant SkillCard
+// Carte interactive présentant un domaine de compétences avec animations au survol.
+
 import { motion } from 'framer-motion';
 
 export default function SkillCard({ title, icons }) {
 
+    // Animations des lignes de bordure (apparition progressive)
     const topLineAnim = {
         initial: { width: 0 },
         hover: {
@@ -48,6 +52,7 @@ export default function SkillCard({ title, icons }) {
         }
     };
 
+    // Animation du titre lors du survol
     const titleAnim = {
         hover: {
             opacity: 0.2,
@@ -55,6 +60,7 @@ export default function SkillCard({ title, icons }) {
         }
     };
 
+    // Animation du bloc d’icônes lors du survol
     const iconsAnim = {
         hover: {
             scale: 1.05,
@@ -63,33 +69,25 @@ export default function SkillCard({ title, icons }) {
     };
 
     return (
-        <motion.div
-            className="skill-card"
-            initial="initial"
-            whileHover="hover"
-        >
 
+        <motion.div className="skill-card" initial="initial" whileHover="hover">
+
+            {/* Titre du domaine de compétences */}
             <motion.h3 className="skill-title" variants={titleAnim}>
                 {title}
             </motion.h3>
 
-            {/* Coins — on les laisse FIXES */}
+            {/* Coins décoratifs fixes */}
             <div className="corner top-left"></div>
             <div className="corner bottom-right"></div>
 
-            {/* TOP */}
+            {/* Bordures animées */}
             <motion.div className="line top-line" variants={topLineAnim}></motion.div>
-
-            {/* BOTTOM — part DU COIN DROITE */}
             <motion.div className="line bottom-line" variants={bottomLineAnim}></motion.div>
-
-            {/* RIGHT */}
             <motion.div className="line right-line" variants={rightLineAnim}></motion.div>
-
-            {/* LEFT */}
             <motion.div className="line left-line" variants={leftLineAnim}></motion.div>
 
-            {/* Icônes */}
+            {/* Icônes des technologies associées */}
             <motion.div className="icons" variants={iconsAnim}>
                 {icons.map(({ Icon, label }, i) => (
                     <div key={i} className="item" aria-label={label}>
@@ -98,6 +96,7 @@ export default function SkillCard({ title, icons }) {
                     </div>
                 ))}
             </motion.div>
+            
         </motion.div>
     );
 }

@@ -1,3 +1,6 @@
+// Composant ActionBtn
+// Bouton d’action réutilisable avec animation visuelle et libellé personnalisé.
+
 export default function ActionBtn( { type = "button", onClick, label}) {
 
     return (

@@ -24,6 +24,7 @@ export default function About() {
 
                     {/* Bloc texte : présentation et parcours */}
                     <div className="about-text flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
+
                         <p className="about-subtitle font-['poppins-semibold'] text-[3rem] block uppercase">Développeur Web FullStack</p>
                         <div className="about-paragraphs flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
                             <p>Après plus de vingt ans d’expérience dans le secteur de l’optique, dont quinze ans en tant que manager, j’ai choisi de me reconvertir vers le développement web. Cette expérience m’a permis d’acquérir rigueur, sens de l’organisation et gestion de projets, des compétences que je mets aujourd’hui au service de solutions digitales efficaces.</p>
@@ -35,15 +36,20 @@ export default function About() {
                             <p>Mon CV est consultable ici</p>
                             <DownloadBtn URLfile="/documents/CV_JH.pdf"/>
                         </div>
+                        
                     </div>
 
                     {/* Illustration visuelle du profil */}
                     <div className="about-image flex-1 max-w-[650px] shrink-0 rounded-[4px] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
                         <img src={banner_v2} alt="Banner Julien Hardy Développeur Web FullStack" className="w-full h-full object-cover" />
                     </div>
+
                 </div>
-            </div> 
+
+            </div>
+
         </SectionWrapper>
 
     );
+    
 }

@@ -58,6 +58,7 @@ export default function Contact() {
     const modalRoot = document.getElementById("modal-root");
 
     return (
+
         <div>
 
             <SectionWrapper id="contact">
@@ -73,6 +74,7 @@ export default function Contact() {
 
                         {/* Informations de contact */}
                         <div className="contact-infos flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
+
                             <div className="contact-text flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
                                 <p>Vous avez un projet web ou besoin d’un accompagnement technique ?</p>
                                 <p>Vous souhaitez échanger à propos d’un poste, d’une mission ou d’un projet web ?</p>
@@ -96,18 +98,24 @@ export default function Contact() {
                                     <span className="font-['poppins-regular'] text-[1.5rem] text-[var(--accent-color)]">contact@julien-hardy.fr</span>
                                 </a>
                             </div>
+
                         </div>
 
                         {/* Formulaire de contact */}
                         <div className="contact-form-wrapper flex-1 max-w-[650px] shrink-0 rounded-[0.25rem] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
                             <ContactForm onSubmit={handleSubmit} />
                         </div>
+
                     </div>
                 </div>
+
             </SectionWrapper>
 
             {/* Modale de confirmation après envoi du formulaire */}
             {showModal && modalRoot && createPortal(<SuccessModal onClose={handleRedirect} />, modalRoot)}
+
         </div>
+
     );
+    
 }

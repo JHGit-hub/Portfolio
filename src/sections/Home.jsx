@@ -48,6 +48,7 @@ export default function Home() {
                         {/* Stack technologique */}
                         <p className="home-stack font-['poppins-semibold'] flex gap-[0.25rem] items-center">
                             PHP <FaDiamond size={6} color="var(--accent-color)" /> React <FaDiamond size={6} color="var(--accent-color)" /> Symfony <FaDiamond size={6} color="var(--accent-color)" /> WordPress</p>
+                    
                     </div>
                 </div>
 
@@ -57,8 +58,11 @@ export default function Home() {
                         <p className=" font-['poppins-semibold'] text-[0.75rem] flex gap-[0.25rem] items-center">Scrollez pour explorer<FaArrowDownLong size={12} color="var(--accent-color)" /></p>
                     </motion.div>
                 </div>
+
             </div>
+
         </SectionWrapper>
 
     );
+    
 }

@@ -1,4 +1,6 @@
-// Composant d’arrière-plan global avec image et overlay de couleur
+// Composant BackgroundOverlay
+// Arrière-plan global fixe avec image et couche d’assombrissement.
+// Utilisé pour unifier l’identité visuelle sur l’ensemble du site
 
 import BackgroundLogo from '../assets/images/background.jpg';
 export default function BackgroundOverlay() {

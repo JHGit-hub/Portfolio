@@ -1,15 +1,15 @@
+// Composant ContactForm
+// Formulaire de contact permettant la saisie et l’envoi d’un message utilisateur.
+
 import ActionBtn from "./buttons/ActionBtn";
 
 export default function ContactForm({ onSubmit }) {
 
     return (
 
-        <form 
-            onSubmit={onSubmit} 
-            className="contact-form w-full flex flex-col gap-[1rem] p-[0.5rem]"
-        >
+        <form onSubmit={onSubmit} className="contact-form w-full flex flex-col gap-[1rem] p-[0.5rem]">
 
-            {/* Email */}
+            {/* Champ de saisie de l’adresse email */}
             <div className="contact-form-group flex flex-col gap-[1rem]">
                 <label
                     htmlFor="email"
@@ -28,7 +28,7 @@ export default function ContactForm({ onSubmit }) {
                 />
             </div>
 
-            {/* Message */}
+            {/* Champ de saisie du message */}
             <div className="contact-form-group flex flex-col gap-[1rem]">
                 <label
                     htmlFor="message"
@@ -47,15 +47,12 @@ export default function ContactForm({ onSubmit }) {
                 />
             </div>
 
-            {/* Bouton */}
+            {/* Action de soumission du formulaire */}
             <div className="contact-form-submit">
                 <ActionBtn type="submit" label="envoyer" />
             </div>
 
-
-
         </form>
-
-
+        
     );
 }

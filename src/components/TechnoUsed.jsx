@@ -1,4 +1,5 @@
-// Composant d'affichage des icones des technologies utilisées dans un projet
+// Composant TechnoUsed
+// Affiche la liste des technologies associées à un projet.
 
 export default function TechnoUsed({ icons }) {
 
@@ -15,9 +16,13 @@ export default function TechnoUsed({ icons }) {
 
                     {/* Libellé de la technologie */}
                     <span className="text-[var(--dark-color)] text-[10px]">{label}</span>
+
                 </div>
+
             ))}
+
         </div>
 
     )
+    
 }

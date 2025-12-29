@@ -1,4 +1,5 @@
-// Composant d'affichage de la modale de confirmation du formulaire de contact
+// Composant SuccessModal
+// Modale de confirmation affichée après l’envoi du formulaire de contact.
 
 import ActionBtn from "./buttons/ActionBtn";
 
@@ -20,6 +21,7 @@ export default function SuccessModal({ onClose }) {
 
                 {/* Intégration du bouton d'action de fermeture de la modale */}
                 <ActionBtn type="button" label="Accueil" onClick={onClose} />
+                
             </div>
         </div>
 

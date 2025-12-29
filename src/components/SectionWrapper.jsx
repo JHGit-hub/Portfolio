@@ -1,4 +1,5 @@
-// Composant conteneur réutilisable pour structurer les sections de la page
+// Composant SectionWrapper
+// Conteneur réutilisable permettant de structurer les sections de la page.
 
 export default function SectionWrapper({ id, children, className = "" }) {
 

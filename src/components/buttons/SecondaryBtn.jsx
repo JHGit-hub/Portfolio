@@ -1,3 +1,6 @@
+// Composant SecondaryBtn
+// Bouton secondaire menant vers un projet externe.
+
 export default function SecondaryBtn({ to }) {
 
     return (

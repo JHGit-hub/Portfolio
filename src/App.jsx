@@ -1,3 +1,7 @@
+// Composant App
+// Point d’entrée de l’application, responsable de l’orchestration globale
+// (navigation, sections, layout et comportements transverses).
+
 import './App.css';
 import OverlaySideRight from "./components/OverlaySide";
 import Footer from "./components/footer.jsx";
@@ -13,18 +17,19 @@ import useScrollSnap from './hooks/useScrollSnap.js';
 
 export default function App() {
 
-    {/* constante pour scroll snap one-shot */}
+    // Gestion du scroll snap et de la navigation par sections
     const { activeIndex, navigateTo } = useScrollSnap("container");
 
     return (
 
         <div>
-            {/* Intégration du header, du background et du menu latéral */}
+
+            {/* Éléments globaux : arrière-plan, header et navigation latérale */}
             <BackgroundOverlay />
             <Header onNavigate={navigateTo}/>
             <OverlaySideRight activeIndex={activeIndex} onNavigate={navigateTo}/>
 
-            {/* Intégration des différentes sections */}
+            {/* Sections principales de l’application */}
             <main className="relative z-10">
                 <div id="container">
                     <Home />
@@ -35,7 +40,7 @@ export default function App() {
                 </div>
             </main>
 
-            {/* Intégration des footers */}
+            {/* Navigations secondaires et pied de page */}
             <FooterNavMobile />
             <Footer />
         </div>
