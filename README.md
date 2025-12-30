@@ -46,14 +46,11 @@ Ce portfolio reflète mon évolution, ma rigueur, ma créativité et ma maîtris
 
 ## Projets présentés
 
-Chaque carte renvoie soit vers le projet déployé (Vercel, Netlify), soit vers son dépôt GitHub.
-
 Exemples de projets inclus :
 - **Cutie Panda** — Application React de gestion de personnage  
 - **Empty Fridge** — Application React de suggestion de recettes  
 - **Cinéma Pathé** — Simulateur de borne de réservation  
-- **Farine & Potiron** — Plateforme communautaire PHP/MVC  
-- **Gestion d’articles** — Application CRUD avec rôles utilisateurs  
+- **Farine & Potiron** — Plateforme communautaire PHP/MVC    
 - + autres projets présentés directement dans la section dédiée
 
 ---
@@ -77,6 +74,6 @@ npm run dev
 
 ## Author
 
-👤 **Julien - Promo 2025**
+👤 **Julien - 2025**
 
 * Github: [@JHGit-hub](https://github.com/JHGit-hub)
