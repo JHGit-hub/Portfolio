@@ -11,9 +11,9 @@ import CutiePandaGaming from '../assets/images/project-cutie-panda/cutie-panda-g
 import EmptyFridgeTitle from '../assets/images/project-empty-fridge/empty-fridge-title-2.jpg';
 import EmptyFridgeIngredient from '../assets/images/project-empty-fridge/empty-fridge-ingredient.png';
 import CinemaTitle from '../assets/images/project-cinema/cinema-title-2.jpg';
-import CinemaReservation from '../assets/images/project-cinema/cinema-reservation.png';
+import CinemaReservation from '../assets/images/project-cinema/cinema-reservation.webp';
 import HotelTitle from '../assets/images/project-hotel/hotel-title-2.jpg';
-import HotelBooking from '../assets/images/project-hotel/hotel-booking.png';
+import HotelBooking from '../assets/images/project-hotel/hotel-booking.webp';
 import BolonewsTitle from '../assets/images/project-bolonews/bolonews-title-2.jpg';
 import BolonewsArticle from '../assets/images/project-bolonews/bolonews-article.png';
 import FlourTitle from '../assets/images/project-flour/flour-title-2.jpg';

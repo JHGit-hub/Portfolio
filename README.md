@@ -4,7 +4,7 @@
 </p>
 
 ## Titre
-> PORTFOLIO PERSONNEL — DÉVELOPPEUR WEB FULLSTACK
+> PORTFOLIO PERSONNEL — DÉVELOPPEUR WEB FULL-STACK
 
 ## Nom du projet
 Portfolio — Julien Hardy

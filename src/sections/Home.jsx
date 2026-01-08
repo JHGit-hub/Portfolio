@@ -37,10 +37,10 @@ export default function Home() {
                     <div className="home-text w-1/2 flex flex-col gap-[0.25rem]">
 
                         {/* Identité */}
-                        <p className="uppercase tracking-widest font-['poppins-regular'] text-[1.25rem] text-[var(--accent-color)]">Julien Hardy</p>
+                        <h1 className="flex flex-col"><span className="uppercase tracking-widest font-['poppins-regular'] text-[1.25rem] text-[var(--accent-color)]">Julien Hardy</span>
 
                         {/* Titre principal */}
-                        <h1>Développeur Web</h1>
+                        Développeur Web</h1>
 
                         {/* Spécialisation */}
                         <h2 className="subtitle">Full-Stack</h2>

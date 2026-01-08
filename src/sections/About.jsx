@@ -25,10 +25,10 @@ export default function About() {
                     {/* Bloc texte : présentation et parcours */}
                     <div className="about-text flex flex-col flex-1 min-w-[300px] gap-[1rem] justify-between">
 
-                        <p className="about-subtitle font-['poppins-semibold'] text-[3rem] block uppercase">Développeur Web FullStack</p>
+                        <h4 className="about-subtitle block uppercase">Développeur Web Full-Stack</h4>
                         <div className="about-paragraphs flex flex-col gap-[1rem] text-lg leading-relaxed space-y-4 w-3/4">
                             <p>Après plus de vingt ans d’expérience dans le secteur de l’optique, dont quinze ans en tant que manager, j’ai choisi de me reconvertir vers le développement web. Cette expérience m’a permis d’acquérir rigueur, sens de l’organisation et gestion de projets, des compétences que je mets aujourd’hui au service de solutions digitales efficaces.</p>
-                            <p>Certifié Développeur Web Fullstack, je maîtrise des technologies modernes telles que React.js, Symfony et WordPress, avec une approche orientée qualité, performance et expérience utilisateur.</p>
+                            <p>Certifié Développeur Web Full-Stack, je maîtrise des technologies modernes telles que React.js, Symfony et WordPress, avec une approche orientée qualité, performance et expérience utilisateur.</p>
                         </div>
 
                         {/* Appel à l’action : téléchargement du CV */}
@@ -41,7 +41,7 @@ export default function About() {
 
                     {/* Illustration visuelle du profil */}
                     <div className="about-image flex-1 max-w-[650px] shrink-0 rounded-[4px] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
-                        <img src={banner_v2} alt="Banner Julien Hardy Développeur Web FullStack" className="w-full h-full object-cover" />
+                        <img src={banner_v2} alt="Banner Julien Hardy Développeur Web Full-Stack" className="w-full h-full object-cover" />
                     </div>
 
                 </div>

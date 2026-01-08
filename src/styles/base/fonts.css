@@ -49,6 +49,12 @@ h3 {
     text-transform: uppercase;
 }
 
+h4{
+    font-family: "poppins-semibold";
+    color: #F5F6F6;
+    font-size: 3rem
+}
+
 p {
     font-family: "poppins-regular";
     color: #F5F6F6;

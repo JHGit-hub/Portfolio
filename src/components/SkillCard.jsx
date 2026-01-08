@@ -73,7 +73,7 @@ export default function SkillCard({ title, icons }) {
         <motion.div className="skill-card" initial="initial" whileHover="hover">
 
             {/* Titre du domaine de compétences */}
-            <motion.h3 className="skill-title" variants={titleAnim}>
+            <motion.h3 className="skill-title" variants={titleAnim} aria-label={`Compétences ${title}`}>
                 {title}
             </motion.h3>
 
