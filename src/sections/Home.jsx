@@ -45,6 +45,11 @@ export default function Home() {
                         {/* Spécialisation */}
                         <h2 className="subtitle">Full-Stack</h2>
 
+                        {/* Localisation */}
+                        <p className="font-['poppins-medium'] text-[0.85rem] text-[var(--light-color)]">
+                        Basé à <span className="text-[var(--accent-color)]">Meaux</span> (Île-de-France)
+                        </p>
+
                         {/* Stack technologique */}
                         <p className="home-stack font-['poppins-semibold'] flex gap-[0.25rem] items-center">
                             PHP <FaDiamond size={6} color="var(--accent-color)" /> React <FaDiamond size={6} color="var(--accent-color)" /> Symfony <FaDiamond size={6} color="var(--accent-color)" /> WordPress</p>
