@@ -48,7 +48,7 @@ export default function ContactForm({ onSubmit }) {
             </div>
 
             {/* Action de soumission du formulaire */}
-            <div className="contact-form-submit">
+            <div className="contact-form-submit pb-[2rem]">
                 <ActionBtn type="submit" label="envoyer" />
             </div>
 

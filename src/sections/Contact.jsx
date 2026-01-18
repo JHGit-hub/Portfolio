@@ -102,7 +102,7 @@ export default function Contact() {
                         </div>
 
                         {/* Formulaire de contact */}
-                        <div className="contact-form-wrapper flex-1 max-w-[650px] shrink-0 rounded-[0.25rem] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden aspect-[16/9]">
+                        <div className="contact-form-wrapper flex-1 max-w-[650px] shrink-0 rounded-[0.25rem] shadow-[0_8px_30px_0_hsla(180,5%,96%,0.3)] overflow-hidden">
                             <ContactForm onSubmit={handleSubmit} />
                         </div>
 

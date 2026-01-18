@@ -1,5 +1,6 @@
 // Hook useScrollSnap
 // Gère un scroll par sections avec effet de snap et navigation contrôlée.
+// Version adaptative : permet le scroll dans les sections qui dépassent le viewport
 
 import { useEffect, useRef, useState } from "react";
 
@@ -12,13 +13,10 @@ export default function useScrollSnap(containerId = "container") {
     const currentIndex = useRef(0);
     const isScrolling = useRef(false);
     const sections = useRef([]);
+    const lastScrollTime = useRef(0);
 
-    // Délai de verrouillage entre deux scrolls successifs (en millisecondes )
-    const scrollLockDelay = 350;
-
-    // Accumulation du scroll pour éviter les déclenchements trop sensibles
-    const wheelDelta = useRef(0);
-    const SCROLL_THRESHOLD = 40;
+    // Délai de verrouillage entre deux scrolls successifs (en millisecondes)
+    const scrollLockDelay = 800;
 
     useEffect(() => {
 
@@ -32,34 +30,86 @@ export default function useScrollSnap(containerId = "container") {
 
         sections.current = Array.from(container.querySelectorAll("section"));
 
-        // Gestion du scroll à la molette
-        const handleWheel = (e) => {
+        // IMPORTANT : Activer le scroll sur le body
+        document.body.style.overflowY = 'auto';
+        document.documentElement.style.overflowY = 'auto';
 
-            e.preventDefault();
-
-            // Blocage si une animation est déjà en cours
-            if (isScrolling.current) return;
-
-            // Accumulation du delta de scroll
-            wheelDelta.current += e.deltaY;
-
-            // Seuil minimum avant déclenchement
-            if (Math.abs(wheelDelta.current) < SCROLL_THRESHOLD) return;
-
-            // Calcul de la section cible selon le sens du scroll
-            const nextIndex = wheelDelta.current > 0 ? currentIndex.current + 1 : currentIndex.current - 1;
-
-            navigateTo(nextIndex);
-
-            // Réinitialisation du delta
-            wheelDelta.current = 0;
-
+        // Détecte quelle section est actuellement visible
+        const updateActiveSection = () => {
+            const scrollPos = window.scrollY + window.innerHeight / 3;
+            
+            sections.current.forEach((section, index) => {
+                const sectionTop = section.offsetTop;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    if (currentIndex.current !== index) {
+                        currentIndex.current = index;
+                        setActiveIndex(index);
+                    }
+                }
+            });
         };
 
+        // Gestion du scroll à la molette avec debounce
+        const handleWheel = (e) => {
+            const now = Date.now();
+            
+            // Bloquer si animation en cours ou trop rapide
+            if (isScrolling.current || now - lastScrollTime.current < 100) {
+                return;
+            }
+
+            const currentSection = sections.current[currentIndex.current];
+            if (!currentSection) return;
+
+            const direction = e.deltaY > 0 ? 1 : -1;
+            const sectionRect = currentSection.getBoundingClientRect();
+            const sectionHeight = currentSection.scrollHeight;
+            const viewportHeight = window.innerHeight;
+
+            // Section plus petite que viewport : snap classique
+            if (sectionHeight <= viewportHeight + 50) {
+                const isAtTop = sectionRect.top >= -10;
+                const isAtBottom = sectionRect.bottom <= viewportHeight + 10;
+                
+                if ((direction > 0 && isAtTop) || (direction < 0 && isAtBottom)) {
+                    e.preventDefault();
+                    const nextIndex = currentIndex.current + direction;
+                    if (nextIndex >= 0 && nextIndex < sections.current.length) {
+                        navigateTo(nextIndex);
+                    }
+                }
+            } 
+            // Section plus grande : permettre scroll interne puis snap
+            else {
+                const isAtTop = sectionRect.top >= -10;
+                const isAtBottom = sectionRect.bottom <= viewportHeight + 10;
+                
+                // Snap uniquement si on est aux extrémités de la section
+                if ((direction > 0 && isAtBottom) || (direction < 0 && isAtTop)) {
+                    e.preventDefault();
+                    const nextIndex = currentIndex.current + direction;
+                    if (nextIndex >= 0 && nextIndex < sections.current.length) {
+                        navigateTo(nextIndex);
+                    }
+                }
+                // Sinon laisser le scroll natif se faire
+            }
+
+            lastScrollTime.current = now;
+        };
+
+        // Écouter le scroll pour mettre à jour la section active
+        window.addEventListener('scroll', updateActiveSection, { passive: true });
         window.addEventListener("wheel", handleWheel, { passive: false });
 
-        // Nettoyage de l’écouteur
+        // Init
+        updateActiveSection();
+
+        // Nettoyage
         return () => {
+            window.removeEventListener('scroll', updateActiveSection);
             window.removeEventListener("wheel", handleWheel);
         };
         
@@ -68,7 +118,7 @@ export default function useScrollSnap(containerId = "container") {
     // Navigation programmatique vers une section donnée
     const navigateTo = (index) => {
 
-        // Vérification des bornes et de l’état de scroll
+        // Vérification des bornes et de l'état de scroll
         if (index < 0 || index >= sections.current.length) return;
         if (isScrolling.current) return;
 
@@ -82,7 +132,7 @@ export default function useScrollSnap(containerId = "container") {
             block: "start",
         });
 
-        // Déverrouillage après l’animation
+        // Déverrouillage après l'animation
         setTimeout(() => {
             isScrolling.current = false;
         }, scrollLockDelay);
