@@ -71,7 +71,7 @@ export default function useScrollSnap(containerId = "container") {
             // Section plus petite que viewport : snap classique
             if (sectionHeight <= viewportHeight + 50) {
                 const isAtTop = sectionRect.top >= -10;
-                const isAtBottom = sectionRect.bottom <= viewportHeight + 150;
+                const isAtBottom = sectionRect.bottom <= viewportHeight + 200;
                 
                 if ((direction > 0 && isAtTop) || (direction < 0 && isAtBottom)) {
                     e.preventDefault();
