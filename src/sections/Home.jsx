@@ -28,13 +28,13 @@ export default function Home() {
             <div className="home-hero relative flex items-center">
 
                 {/* Élément visuel principal : globe animé */}
-                <div className="home-globe w-1/2 h-[400px]">
+                <div className="home-globe w-1/3 h-[400px]">
                     <Globe />
                 </div>
 
                 {/* Bloc texte de présentation */}
                 <div className="home-text-wrapper flex h-screen items-center">
-                    <div className="home-text w-1/2 flex flex-col gap-[0.25rem]">
+                    <div className="home-text w-2/3 flex flex-col gap-[0.25rem]">
 
                         {/* Identité */}
                         <h1 className="flex flex-col"><span className="uppercase tracking-widest font-['poppins-regular'] text-[1.25rem] text-[var(--accent-color)]">Julien Hardy</span>
