@@ -34,7 +34,7 @@ export default function About() {
                         {/* Appel à l’action : téléchargement du CV */}
                         <div className="about-cta mt-[2rem] flex flex-row items-center gap-[1.5rem]">
                             <p>Mon CV est consultable ici</p>
-                            <DownloadBtn URLfile="/documents/CV_JH.pdf"/>
+                            <DownloadBtn URLfile="/documents/Julien-Hardy_CV_Developpeur-Web-Full-Stack.pdf"/>
                         </div>
                         
                     </div>
